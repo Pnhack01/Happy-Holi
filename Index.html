@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Happy Holi Celebration</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+     <style>
+         @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;700&family=Dancing+Script:wght@700&display=swap');
+ 
+         * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+         body { 
+             overflow: hidden; 
+             display: flex; 
+             justify-content: center; 
+             align-items: center; 
+             height: 100vh; 
+             flex-direction: column;
+             text-align: center;
+             position: relative;
+             animation: bgColor 10s infinite alternate;
+             transition: background 1s ease-in-out;
+             font-family: 'Poppins', sans-serif;
+         }
+ 
+         @keyframes bgColor {
+             0% { background: #ff5733; color: #fff; }
+             25% { background: #ffbd33; color: #000; }
+             50% { background: #33ff57; color: #000; }
+             75% { background: #3357ff; color: #fff; }
+             100% { background: #ff33bd; color: #fff; }
+         }
+ 
+         h1 {
+             font-size: 100px;
+             font-family: 'Dancing Script', cursive;
+             font-weight: bold;
+             text-transform: uppercase;
+             text-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+             animation: neonGlow 1.5s infinite alternate;
+         }
+ 
+         .wishes {
+             font-size: 30px;
+             margin-top: 10px;
+             text-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+         }
+ 
+         #particles-js {
+             position: absolute;
+             width: 100%;
+             height: 100%;
+             top: 0;
+             left: 0;
+             z-index: -1;
+         }
+     </style>
+ </head>
+ <body>
+     <div id="particles-js"></div>
+     <h1> Happy Holi </h1>
+     <div class="wishes">my friends... </div>
+     <div class="wishes">May your life be filled with colors of joy, happiness, and prosperity! </div>
+     <script>
+         VanillaTilt.init(document.body, {
+             max: 10,
+             speed: 200,
+             glare: true,
+             "max-glare": 0.3
+         });
+ 
+         particlesJS("particles-js", {
+             "particles": {
+                 "number": { "value": 300 },
+                 "shape": { "type": "circle" },
+                 "size": { "value": 6, "random": true },
+                 "move": { "speed": 3, "direction": "top", "out_mode": "out" },
+                 "color": { "value": ["#ff0000", "#ff7f00", "#ffff00", "#00ff00", "#0000ff", "#4b0082", "#8b00ff"] }
+             },
+             "interactivity": {
+                 "events": {
+                     "onhover": { "enable": true, "mode": "bubble" },
+                     "onclick": { "enable": true, "mode": "repulse" }
+                 }
+             }
+         });
+     </script>
+ </body>
+ </html>
